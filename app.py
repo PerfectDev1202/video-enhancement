@@ -70,11 +70,11 @@ while cap.isOpened():
         if start_frame < current_frame <= end_frame:
             # print(text,score)
             if not pd.isna(text):
-                img_mod = draw_semi_transparent_rectangle(denoised_img_enhanced,(0,-100),-1,100,(255,0,0),0.2)
+                img_mod = draw_semi_transparent_rectangle(denoised_img_enhanced,(0,-100),-1,100,(58,78,78),0.5)
                 img_mod = draw_semi_transparent_text(img_mod, text, (0, -100), cv2.FONT_HERSHEY_TRIPLEX, font_scale=2, color=(255, 255, 255), alpha=0.7,width=-1, height=100)
             if not pd.isna(score):
-                img_mod = draw_semi_transparent_rectangle(denoised_img_enhanced,(-400,100),300,80,(255,0,0),0.5,thickness=5)
-                img_mod = draw_semi_transparent_text(img_mod, f"Score: {int(score)}", (-400,100), cv2.FONT_HERSHEY_TRIPLEX, font_scale=1.5, color=(255, 30, 120), width=300, height=80 ,alpha=0.7)
+                img_mod = draw_semi_transparent_rectangle(denoised_img_enhanced,(-400,100),300,80,(0,55,55),0.8,thickness=5)
+                img_mod = draw_semi_transparent_text(img_mod, f"Score: {int(score)}", (-400,100), cv2.FONT_HERSHEY_TRIPLEX, font_scale=1, color=(205, 72, 63), width=300, height=80 ,alpha=0.7)
 
 
     # Write the processed frame to the output video
